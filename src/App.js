@@ -66,7 +66,7 @@ function App() {
         {result.map((image) => (
           <>
             <div className="card">
-              <img src={image?.urls?.small} />
+              <img src={image?.urls?.regular} />
 
               <p className="username">
                 Photo by {image.user.name}</p>
