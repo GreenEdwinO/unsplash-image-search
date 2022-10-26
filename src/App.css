@@ -16,6 +16,10 @@
   align-items: center;
 }
 
+.heading {
+  max-width: 900px;
+}
+
 .heading > h1 {
   font-size: 2rem;
   font-weight: 550;
@@ -136,7 +140,7 @@ button:active {
 }
 
 .app > p {
-  font-size: .8rem;
+  font-size: .7rem;
   width: 100%;
   text-align: center;
   margin-top: 4rem;

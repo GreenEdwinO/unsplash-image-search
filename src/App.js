@@ -8,7 +8,7 @@ function App() {
   const [image, setImage] = useState("");
   const [result, setResult] = useState([]);
   const [count, setCount] = useState(1);
- // const [resulotion, setResolution] = useState("");
+  // const [resulotion, setResolution] = useState("");
 
   // const fetchResolution = (resulotion) => {
   //   setResolution(() => resulotion)
@@ -16,6 +16,7 @@ function App() {
 
   const handleChange = (event) => {
     setImage(event.target.value);
+    event.preventDefault();
   };
 
   const handleSubmit = () => {
@@ -54,7 +55,8 @@ function App() {
       <div className="input">
         <input onChange={handleChange} type="text" name="image" placeholder="Search by image name" />
 
-        <button onClick={handleSubmit} type="submit"><span class="material-icons">image_search</span></button>
+        <button onClick={handleSubmit} type="submit"
+          title="Click To Search Images"><span class="material-icons">image_search</span></button>
       </div>
 
 
@@ -78,9 +80,10 @@ function App() {
         ))}
       </div>
 
-      {!!image && <button className="btn" onClick={moreImages} type="submit">More Images...<span class="material-icons">  queue_play_next</span></button>}
+      {!!image && <button className="btn" onClick={moreImages} type="submit"
+        title="Click To Search More Images...">More Images...<span class="material-icons">  queue_play_next</span></button>}
 
-      <p>Created By <a href="https://greenojegwo.netlify.app/">Green</a></p>
+      <p>Built With 💝 By <a href="https://greenojegwo.netlify.app/">Green</a></p>
     </div>
   );
 }
