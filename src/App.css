@@ -21,12 +21,19 @@
 }
 
 .heading > h1 {
+  color: navy;
   font-size: 1.5rem;
-  font-weight: 570;
+  font-weight: 600;
   text-align: center;
   margin-left: 1rem;
   margin-right: 1rem;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
+  margin-bottom: .6rem;
+}
+
+.heading > p {
+  color: navy;
+  text-align: center;
 }
 
 .input {
@@ -35,7 +42,8 @@
 }
 
 .input > input {
-  background: rgb(193, 193, 238);
+  color: black;
+  background: #fff;
   height: 30px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -47,10 +55,10 @@
   outline: none;
 }
 
-.input > input.placeholder {
-  color: #fff;
+/* .input > input.placeholder {
+  color: black;
   font-size: 3rem;
-}
+} */
 
 .material-icons {
   font-size: 28px;
