@@ -8,32 +8,28 @@ function App() {
   const [image, setImage] = useState("");
   const [result, setResult] = useState([]);
   const [count, setCount] = useState(1);
-  // const [resulotion, setResolution] = useState("");
+ // const [resulotion, setResolution] = useState("");
 
   // const fetchResolution = (resulotion) => {
   //   setResolution(() => resulotion)
-  // }
+  // } 
 
   const handleChange = (event) => {
     setImage(event.target.value);
   };
 
   const handleSubmit = () => {
-    console.log(image);
     const url = "https://api.unsplash.com/search/photos?page=1&per_page=30&query=" + image + "&client_id=" + API_KEY;
 
     axios.get(url).then((response) => {
-      console.table(response);
       setResult(response.data.results);
     });
   };
 
   const moreImages = () => {
-    console.log(image);
     const url = "https://api.unsplash.com/search/photos?page=" + count + "&per_page=30&query=" + image + "&client_id=" + API_KEY;
 
     axios.get(url).then((response) => {
-      console.table(response);
       setCount(yesCount => yesCount + 1)
       setResult(response.data.results);
     });
@@ -69,9 +65,9 @@ function App() {
               <img src={image?.urls?.regular} />
 
               <p className="username">
-                Photo by {image.user.name}</p>
+                Photo by {image?.user?.name}</p>
 
-              <p className="like"><span class="material-icons-round yoda">thumb_up_off_alt</span> {image.likes}</p>
+              <p className="like"><span class="material-icons-round yoda">thumb_up_off_alt</span> {image?.likes}</p>
 
               {!!image?.user?.location && <p className="like"><span class="material-icons yoda">location_on</span> {image?.user?.location}</p>}
 
@@ -82,7 +78,7 @@ function App() {
         ))}
       </div>
 
-      <button className="btn" onClick={moreImages} type="submit">More Images...<span class="material-icons">  queue_play_next</span></button>
+      {!!image && <button className="btn" onClick={moreImages} type="submit">More Images...<span class="material-icons">  queue_play_next</span></button>}
 
       <p>Created By <a href="https://greenojegwo.netlify.app/">Green</a></p>
     </div>
