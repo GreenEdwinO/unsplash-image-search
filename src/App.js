@@ -45,7 +45,7 @@ function App() {
   return (
     <div className="app">
       <div className="heading">
-        <h1>Search And Use Millions Of None Copy-Righted Images From Unsplash API</h1>
+        <h1>Search And Use Millions Of Non-Copyrighted Images From Unsplash API</h1>
       </div>
 
       {/* <button onClick={() => fetchResolution("regular")}>Lower</button>

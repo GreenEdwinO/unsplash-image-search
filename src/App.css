@@ -17,13 +17,15 @@
 }
 
 .heading {
-  max-width: 900px;
+  max-width: 650px;
 }
 
 .heading > h1 {
-  font-size: 2rem;
-  font-weight: 550;
+  font-size: 1.5rem;
+  font-weight: 570;
   text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
   /* text-transform: uppercase; */
 }
 
