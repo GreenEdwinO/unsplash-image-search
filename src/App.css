@@ -173,13 +173,13 @@ button:active {
   }
 
   button.btn {
-    width: 200px;
+    width: 250px;
     align-items: center;
-    margin: .6rem auto;
+    margin: 4rem auto;
     position: center;
   }
 
   .app > p {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
   }
 }
