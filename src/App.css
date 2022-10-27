@@ -149,6 +149,10 @@ button:active {
   margin-left: 1rem;
 }
 
+.app > .link {
+  text-decoration: none;
+}
+
 .app > p {
   font-size: .7rem;
   width: 100%;

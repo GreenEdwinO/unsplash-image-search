@@ -81,8 +81,8 @@ function App() {
         ))}
       </div>
 
-      {!!image && <button className="btn" onClick={moreImages} type="submit"
-        title="Click To Search More Images...">More Images...<span class="material-icons">  queue_play_next</span></button>}
+      {!!image && <a href="#" className="link"><button className="btn" onClick={moreImages} type="submit"
+        title="Click To Search More Images...">More Images...<span class="material-icons">  queue_play_next</span></button></a>}
 
       <p>Built With 💝 By <a href="https://greenojegwo.netlify.app/">Green</a></p>
     </div>
